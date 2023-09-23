@@ -1,0 +1,568 @@
+.main {
+  padding-left: 280px;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 240px;
+  float: left;
+  top: 0;
+  left: 0;
+  background-color: #ffce00;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-radius: 0 15px 15px 0;
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ffce00 #ffce00;
+  transition: 0.5s;
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background-color: #ffce00; /* For other lesser browsers */
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar {
+  display: none;
+}
+
+.navbar-toggler {
+  margin-left: 5%;
+}
+
+.nav-item {
+  margin-left: 5%;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.button-group input[type="image"] {
+  margin-right: 10px;
+}
+#layout .Paragraph {
+  width: 70%;
+  display: block;
+  margin: 10px auto;
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+/* MOBILE VIEW START */
+
+@media (max-width: 600px) {
+  .main {
+    padding-left: 0;
+  }
+  .sidenav {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .signup-form {
+    margin: auto;
+  }
+
+  .login-form {
+    margin: auto;
+  }
+
+  .banner {
+    margin-left: 2vh;
+    height: auto;
+  }
+}
+
+/* MOBILE VIEW END */
+
+.banner {
+  position: relative;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
+  padding-top: 15px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+/* REGISTER PAGE START */
+
+#signupPage.signup .signup-form {
+  background-color: #845ab2e6;
+}
+
+.signup-form {
+  position: relative;
+
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+  max-width: 480px;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+}
+
+#signupPage .signup-form input[type="text"],
+#signupPage .signup-form input[type="password"],
+#signupPage .signup-form input[type="password1"],
+#signupPage .signup-form input[type="email"],
+#signupPage .signupInput {
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#signupPage .DOB-grid {
+  width: 90%;
+  margin: 10px auto;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+#signupPage .signup-form select {
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  outline: none;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+#signupPage .register-image {
+  width: 36%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+  min-height: 25px;
+  padding: 0 10px 0 10px;
+}
+
+/* REGISTER PAGE END */
+
+/* LOGIN PAGE START */
+
+.login .login-form {
+  background-color: #ffce00;
+}
+
+.login-form {
+  position: relative;
+
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+  max-width: 480px;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+}
+
+#loginPage .login-form input[type="text"],
+#loginPage .login-form input[type="password"],
+#loginPage .login-form input[type="password1"],
+#loginPage .login-form input[type="email"],
+#loginPage .loginInput {
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#loginPage .DOB-grid {
+  width: 90%;
+  margin: 10px auto;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+#loginPage .login-form select {
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  outline: none;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+#loginPage .login-image {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+  min-height: 25px;
+  padding: 0 10px 0 10px;
+}
+
+/* LOGIN PAGE END */
+
+/* FRUIT MACHINE */
+
+.fruit-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fruit-column {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.fruit-column img {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  position: absolute;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
+
+@media (min-width: 600px) {
+  .banner-fruitmachine {
+    width: 600px;
+    height: auto;
+  }
+
+  #fruitMain {
+    background-image: url("../static/FruitMachine/Fruitmachine-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  #fruitFront {
+    background-image: url("../static/FruitMachine/Fruitmachine-fg.png");
+    left: 0px;
+    top: 0px;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    z-index: 100;
+  }
+
+  #column1 {
+    left: 67.8px;
+    top: 171px;
+    width: 86px;
+    height: 63.5px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  #column2 {
+    left: 246px;
+    top: 171.5px;
+    width: 86px;
+    height: 63.5px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  #column3 {
+    left: 430px;
+    top: 71.1px;
+    width: 86px;
+    height: 63.5px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  #fruitMachine.fm .fruit-form {
+    background-color: #a2dcf7;
+  }
+
+  .fruit-form {
+    position: relative;
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+    max-width: 600px;
+    min-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .collapse{
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-fruitmachine {
+    width: 360px;
+    height: auto;
+  }
+
+  #fruitMain {
+    background-image: url("../static/FruitMachine/Fruitmachine-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 240px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+  #fruitFront {
+    background-image: url("../static/FruitMachine/Fruitmachine-fg.png");
+    top: -114px;
+    left: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 100;
+  }
+  #column1 {
+    left: 41.4px;
+    top: 103.2px;
+    width: 49.8px;
+    height: 37.8px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  #column2 {
+    left: 148.2px;
+    top: 103.2px;
+    width: 49.8px;
+    height: 37.8px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 3;
+  }
+
+  #column3 {
+    left: 259.2px;
+    top: 43.8px;
+    width: 49.8px;
+    height: 37.8px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 4;
+  }
+
+  #fruitMachine.fm .fruit-form {
+    background-color: #a2dcf7;
+  }
+
+  .fruit-form {
+    position: relative;
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+    max-width: 360px;
+    min-width: 360px;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* FRUIT MACHINE END */
+
+/* INVENTORY GRID */
+
+/* INVENTORY GRID END*/
+
+/* GAMES */
+.games-med {
+  background: url("/static/Games/med.png") no-repeat 12px 0px;
+  box-sizing: border-box;
+}
+
+.games-med:hover {
+  background-position: 12px -120px;
+}
+
+.games-med .name {
+  position: relative;
+  bottom: 28px;
+  left: 7px;
+  width: 89%;
+  text-align: center;
+}
+
+.games-med {
+  margin: 15px 14px 0px 0px;
+  height: 120px;
+  width: 172px;
+}
+
+.content {
+  text-align: left;
+}
+/* GAMES END */
+
+/* PET PAGE */
+#PetSelectPage.PetSelect .PetSelect-form {
+  background-color: #ffce00;
+}
+
+.PetSelect-form {
+  position: relative;
+
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+  max-width: 480px;
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 8px 3px rgba(0, 0, 0, 0.5);
+}
+
+#PetSelectPage .PetSelect-form input[type="text"],
+#PetSelectPage .PetSelectInput,
+#PetSelectPage .Paragraph {
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#PetSelectPage .PetColor-grid {
+  width: 100%;
+  margin: 10px auto;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 6fr 0%;
+}
+
+#PetSelectPage .PetSelect-form select {
+  border: unset;
+  border-radius: 10px;
+  min-height: 25px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  box-shadow: inset 3px 3px 0px 0px rgba(204, 204, 204, 1);
+  font-family: "MuseoModerno", sans-serif;
+  outline: none;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+#PetSelectPage .PetSelect-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 10px;
+  min-height: 25px;
+  padding: 0 10px 0 10px;
+}
+/* PET PAGE END */

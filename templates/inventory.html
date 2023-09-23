@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% block title %} Inventory {% endblock %}
+{% block main %}
+<img
+  src="/static/Logo/inventory.png"
+  class="banner"
+  alt="Header Image"
+  height="60px"
+  width="460px"
+/>
+<br />
+<br />
+<div id="loginPage" class="login">
+  <div class="login-form">
+    <div class="row">
+      {% for item in items_all %}
+      <div class="col-3">
+        <div class="d-flex flex-column align-items-center">
+          <div class="PetSelect-image">
+            <a
+              type="input"
+              id="{{ item.user_item_name }}"
+              data-bs-toggle="modal"
+              data-bs-target="#inventoryModal-{{ item.id }}"
+            >
+              <img
+                src="/static/Items/{{ item.user_item_name }}.gif"
+                alt="{{ item.id }}"
+                style="
+                  max-width: 90%;
+                  border-radius: 10%;
+                  border: 1px solid black;
+                "
+              />
+            </a>
+          </div>
+          <p class="text-center">{{ item.user_item_name }}</p>
+        </div>
+      </div>
+
+      <!-- Modal (from bootsrap 5.3 documenation)-->
+      <div
+        class="modal fade"
+        id="inventoryModal-{{ item.id }}"
+        tabindex="-1"
+        aria-labelledby="inventoryModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="inventoryModalLabel">
+                {{ item.user_item_name }}
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-center"></p>
+              <img
+                src="/static/Items/{{ item.user_item_name }}.gif"
+                alt="{{ item.user_item_name }}"
+                style="
+                  max-width: 90%;
+                  border-radius: 10%;
+                  border: 1px solid black;
+                "
+              />
+              <p class="text-left">Value: {{ item.item_value }}</p>
+              <form action="/inventory" method="post">
+              <div class="dropdown-center">
+                <div class="PetColor-grid">
+
+                  <select name="inventoryAction" id="inventoryAction">
+                    <option value="" selected="selected">Choose an Action</option>
+                    {% for pet in pets_all %}
+                    <option value="{{ item.item_use }}|{{ pet.petname }}">{{ item.item_use }} {{ pet.petname }}</option>
+                    {% endfor %}
+                    <option value="delete|None">Discard Item</option>
+
+                  </select>
+
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Submit
+              </button>
+              <input type="hidden" name="item_id" value="{{ item.id }}">
+            </div>
+          </form>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %} 
+    </div>
+  </div>
+</div>
+{% endblock %}

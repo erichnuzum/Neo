@@ -1,0 +1,77 @@
+{% extends "layout.html" %} {% block title %} My Pets {% endblock %} {% block
+main %}
+<img
+  src="\static\Neopets\pets!.png"
+  class="banner"
+  alt="Header Image"
+  height="60px"
+  width="460px"
+  >
+{% for pet in pets_all %}
+
+  
+<br/>
+<br/>
+
+  <style>
+    .pet-container {
+      display: flex;
+      align-items: center;
+    }
+    .pet-info {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="loginPage" class="login">
+        <div class="login-form">
+  <table>
+    <tbody>
+      <tr>
+        <td colspan="2" align="center" valign="top" class="">
+          <div class="pet-container">
+            <div class="pet_image" 
+            style="background-image: url('/static/Neopets/{{ pet.pettype }}_{{ pet.petcolor }}.gif');
+            object-fit: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 150px;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            line-height: 0;
+            border: 1px solid black;
+            border-radius: 10%;"
+            ></div>
+            <div class="pet-info">
+              <b>{{ pet.petname }}</b> the
+              <span style="color: {{ pet.petcolor }}">{{ pet.petcolor }} </span>{{ pet.pettype }}
+              <br />
+              Hit Points: {{ pet.currenthp }} / {{ pet.hp }}
+              <br />
+              Hunger: {{ pet.hunger }}
+              <br>
+              <br>
+            <form action="/mypets" method="post">
+              <button
+              class="btn btn-light"
+              type="submit"
+              name="pet_id"
+              id="pet_id"
+              value="{{ pet.pet_id }}"
+              alt=""
+              style="width: auto; margin-left:auto;">Make Active</button>
+            </form>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div></div>
+
+{% endfor %} {% endblock %}

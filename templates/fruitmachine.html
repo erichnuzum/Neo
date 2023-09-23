@@ -1,0 +1,46 @@
+{% extends "layout.html" %} {% block title %} Fruit Machine {% endblock %} {%
+block main %}
+
+<!--SOME OF MY IMAGES ARE FROM THE NEOPETS.COM website however none of the JS code for my spinner is from NEOPETS.COM-->
+<br>
+<img
+  src="\static\fruitmachine\spin!spin!spin!.png"
+  class="banner-fruitmachine"
+  alt="Header Image"
+  height="60px"
+  width="460px" 
+  >
+<br>
+<br>
+<h2>The Fruit Machine</h2>
+<p style="max-width: 600px;">
+It's the one and only Fruit Machine. Every day you're allowed to take one free spin. If the first two fruits match you'll win a prize. If all three fruits match, you'll win a really big prize!
+</p>  
+
+<br>
+<div id="fruitMachine" class="fm">
+  <div class="fruit-form">  
+	<div class="fruit-container">
+      <div id="fruitMain">
+        <div class="fruit-column" id="column1"></div>
+        <div class="fruit-column" id="column2"></div>
+        <div class="fruit-column" id="column3"></div>
+        <div id="fruitFront"></div>
+      </div>
+    </div>
+    <div class="hidespinbutton" style="text-align: center">
+      <br/>
+      <button type="button" id="spinButton" class="btn btn-light btn-outline-dark">
+        Spin, spin, spin!
+      </button>
+    </div>
+    <div id="resultDisplay" style="text-align: center"></div>
+    <div id="prizemoney"></div>
+  </div>
+</div>
+
+<script src="/static/fruitmachine.js"></script>
+<!--
+<script>localStorage.removeItem('hasSpunWheel');</script>
+-->
+{% endblock %}

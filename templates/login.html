@@ -1,0 +1,105 @@
+{% extends "layout.html" %} {% block title %} Log In {% endblock %} {% block
+main %}
+<img
+  src="\static\Login\LoginToNeo.png"
+  class="banner"
+  alt="Header Image"
+  height="60px"
+  width="460px"
+  >
+  
+<br/>
+<br/>
+
+<div id="loginPage" class="login">
+  <div class="login-form">
+    <form action="/login" method="post">
+      <br />
+      <div class="form-group">
+        <img
+          src="\static\Register\Username.png"
+          alt="Username"
+          style="margin-left: 6%;"
+          height="15px"
+          width="139px"
+        />
+        <input
+          autocomplete="off"
+          autofocus
+          id="username"
+          name="username"
+          placeholder="Username"
+          type="text"
+          size="20"
+          maxlength="20"
+        />
+      </div>
+      <img
+        src="\static\Register\Password.png"
+        alt="Password"
+        style="margin-left: 6%;"
+        height="29px"
+          width="135px"
+      />
+      <div class="form-group">
+        <input
+          id="password"
+          name="password"
+          placeholder="Password"
+          type="password"
+          size="20"
+          maxlength="20"
+        />
+      </div>
+      <div>
+        <input
+          class="login-image"
+          type="image"
+          src="/static/login/loginButton.png"
+          alt=""
+          onmouseover="hover_login(this);"
+          onmouseout="unhover_login(this);"
+          height="67px"
+          width="176px"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<br />
+<br />
+<div id="loginPage" class="login">
+  <div class="login-form">
+    <b>Forgotten your password? TODO</b>
+    <p>
+      Enter your username in the box below<br />and we will email you a link to
+      reset your password.
+    </p>
+  </div>
+</div>
+
+<br>
+<br>
+<div id="signupPage" class="signup">
+  <div class="signup-form">
+    <div style="text-align: center;">
+    <b>Don't Have An Account? Register Now!</b>
+    </div>
+    <a href="/register">
+    <input
+    class="register-image"
+    style="width: 33%;"
+    type="image"
+    src="/static/Register/SignupClassicPurp.png"
+    alt=""
+    onmouseover="hover_signup(this);"
+    onmouseout="unhover_signup(this);"
+    height="67px"
+    width="147px"
+    />
+  </a>
+  </div>
+</div>
+
+{% endblock %}

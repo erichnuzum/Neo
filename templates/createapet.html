@@ -1,0 +1,181 @@
+{% extends "layout.html" %} {% block title %} Create A Pet {% endblock %} {% block
+main %}
+<img
+  src="\static\CreateAPet\createpet.png"
+  class="banner"
+  alt="Header Image"
+  height="60px"
+  width="460px"
+  >
+<br />
+<br />
+<style>
+  /* Style for the white outlined buttons */
+  .btn-dark {
+    background-color: #ffff66;
+    outline: #ffff66;
+    color: black;
+  }
+</style>
+  <div class="form-group">
+    <div id="PetSelectPage" class="PetSelect">
+      <form action="/createapet" method="post">
+
+   
+      <div class="PetSelect-form">
+        <div class="row">
+          <div class="Paragraph">
+          <p style="width: 90%; text-align:center; margin:10px auto; color:black ">
+            You can create your pets here! For a max of 4 pets! Create! PET!!!
+          </p>
+        </div>
+        </div>
+        <div class="row">
+          <!-------------------------------------------------------------------->
+          <div class="col-4">
+            <div class="d-flex justify-content-center ">
+              <div class="PetSelect-image">
+                <img
+                  src="\static\Neopets\bruce_red.gif"
+                  alt="Blue Bruce"
+                  style="max-width: 90%; margin: 0 auto; border-radius: 10%; border: 1px solid black;"
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <input
+                type="radio"
+                class="btn-check"
+                name="pettype"
+                value="bruce"
+                id="option1"
+                autocomplete="off"
+              />
+              <label class="btn btn-dark" for="option1">Bruce</label>
+            </div>
+          </div>
+          <!-------------------------------------------------------------------->
+          <div class="col-4">
+            <div class="d-flex justify-content-center">
+              <div class="PetSelect-image">
+                <img
+                  src="\static\Neopets\chomby_yellow.gif"
+                  alt="Yellow Chomby"
+                  style="max-width: 94%; margin: 0 auto;  border-radius: 10%; border: 1px solid black;"
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <input
+                type="radio"
+                class="btn-check"
+                name="pettype"
+                value="chomby"
+                id="option2"
+                autocomplete="off"
+              />
+              <label class="btn btn-dark" for="option2">Chomby</label>
+            </div>
+          </div>
+
+          <!-------------------------------------------------------------------->
+          <div class="col-4">
+            <div class="d-flex justify-content-center">
+              <div class="PetSelect-image">
+                <img
+                  src="\static\Neopets\poogle_blue.gif"
+                  alt="Blue Poogle"
+                  style="max-width: 94%; margin: 0 auto; border-radius: 10%;border: 1px solid black; "
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <input
+                type="radio"
+                class="btn-check"
+                name="pettype"
+                value="poogle"
+                id="option3"
+                autocomplete="off"
+              />
+              <label class="btn btn-dark" for="option3">Poogle</label>
+            </div>
+          </div>
+          <!-------------------------------------------------------------------->
+          <div class="col-4">
+            <div class="d-flex justify-content-center">
+              <div class="PetSelect-image">
+                <img
+                  src="\static\Neopets\chia_green.gif"
+                  alt="Green Chia"
+                  style="max-width: 94%; margin: 0 auto;  border-radius: 10%; border: 1px solid black;"
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <input
+                type="radio"
+                class="btn-check"
+                name="pettype"
+                value="chia"
+                id="option4"
+                autocomplete="off"
+              />
+              <label class="btn btn-dark" for="option4">Chia</label>
+            </div>
+          </div>
+          <!-------------------------------------------------------------------->
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div id="PetSelectPage" class="PetSelect">
+      <div class="PetSelect-form">
+        <div class="row">
+          <div class="col-6">
+          <input
+            class="PetName-input"
+            autocomplete="off"
+            id="petname"
+            name="petname"
+            placeholder="Pet Name"
+            type="text"
+            size="20"
+            maxlength="20"
+          />
+        </div>
+        <div class="col-6">
+          <div class="dropdown-center">
+            <div class="PetColor-grid">
+              <select name="petcolor" id="petcolor">
+                <option value="" selected="selected">(Select a color)</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+              </select>
+            </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <input
+            class="register-image"
+            type="image"
+            src="/static/CreateAPet/create.png"
+            alt=""
+            style="width: 34%; margin-left:4%;"
+            onmouseover="hover_signup(this);"
+            onmouseout="unhover_signup(this);"
+          />
+        </div>
+      </div>
+    </div>
+
+    </form>
+
+  </div>
+{% endblock %}
